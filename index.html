@@ -11,26 +11,59 @@
   <body>
     <header>
       <nav>
-          <h1>ViaCep</h1>
-          <div>contact</div>
+        <h1>ViaCep</h1>
+        <div>contact</div>
       </nav>
     </header>
     <main>
-        <section id="form-section">
-
-        </section>
-        <section id="list-section">
+      <section id="form-section">
+        <div>
+          <form name="newAddress">
             <div>
-                <h3>São Paulo</h3>
-                <p>Rua Ivaí, 665</p>
-                <p>09560-570</p>
+              <label for="cep">CEP:</label>
+              <input type="text" name="cep" id="cep" placeholder="CEP" />
             </div>
             <div>
-                <h3>São Paulo</h3>
-                <p>Rua Ivaí, 665</p>
-                <p>09560-570</p>
+              <label for="street">Logradouro:</label>
+              <input
+                type="text"
+                name="street"
+                id="street"
+                placeholder="Logradouro"
+              />
             </div>
-        </section>
+            <div>
+              <label for="number">Número:</label>
+              <input
+                type="text"
+                name="number"
+                id="number"
+                placeholder="Número"
+              />
+            </div>
+            <div>
+              <label for="city">Cidade:</label>
+              <input type="text" name="city" id="city" placeholder="Cidade" />
+            </div>
+            <div>
+              <button type="submit">Salvar</button>
+              <button>Limpar</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section id="list-section">
+        <div>
+          <h3>São Paulo</h3>
+          <p>Rua Ivaí, 665</p>
+          <p>09560-570</p>
+        </div>
+        <div>
+          <h3>São Paulo</h3>
+          <p>Rua Ivaí, 665</p>
+          <p>09560-570</p>
+        </div>
+      </section>
     </main>
   </body>
 </html>
