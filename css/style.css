@@ -7,6 +7,7 @@
   --error-color: #FF3333;
   --placeholder: #AAA;
   --disabled: #EEE;
+  --cep: #CCFFFF;
   --white: #FFF;
 }
 
@@ -116,4 +117,37 @@ body {
 
 .btn-right {
   margin-left: 10px;
+}
+
+.list-container {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-list-item {
+  background-color: var(--second-color);
+  color: var(--white);
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 900px;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.card-list-item h3 {
+  color: var(--primary-color);
+  font-size: 18px;
+}
+
+.address-line {
+  color: var(--white);
+  font-size: 14px;
+}
+
+.address-cep {
+  color: var(--cep);
+  font-size: 12px;
 }
