@@ -51,8 +51,16 @@ function handleBtnClearClick(e) {
 
 async function handleBtnSaveClick(e) {
   e.preventDefault();
-  listController.addCard(state.address);
-  clearForm();
+  const errors = addressService.getErrors(state.address);
+  const keys = Object.keys(errors);
+  if (keys.length > 0) {
+    keys.forEach((key) => {
+      setFormError(key, errors[key]);
+    });
+  } else {
+    listController.addCard(state.address);
+    clearForm();
+  }
 }
 
 async function handleInputCepChange(e) {
@@ -83,7 +91,7 @@ function clearForm() {
   state.inputCity.value = "";
 
   state.inputCep.focus();
-  
+
   setFormError("cep", "");
   setFormError("number", "");
 

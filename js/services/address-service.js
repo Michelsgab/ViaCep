@@ -13,3 +13,14 @@ export async function findByCep(cep) {
   );
   return address;
 }
+
+export function getErrors(address) {
+  const errors = {};
+  if (!address.cep || address.cep == "") {
+    errors.cep = "CEP é um campo obrigatório";
+  }
+  if (!address.number || address.number == "") {
+    errors.number = "Número é um campo obrigatório";
+  }
+  return errors;
+}
