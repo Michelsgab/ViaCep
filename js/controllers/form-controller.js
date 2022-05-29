@@ -49,7 +49,7 @@ function handleBtnClearClick(e) {
   clearForm();
 }
 
-async function handleBtnSaveClick(e) {
+function handleBtnSaveClick(e) {
   e.preventDefault();
   const errors = addressService.getErrors(state.address);
   const keys = Object.keys(errors);

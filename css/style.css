@@ -1,14 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap");
+@import "modal.css";
 
 :root {
   --primary-color: #88f9d4;
   --second-color: #18c29c;
   --third-color: #126872;
-  --error-color: #FF3333;
-  --placeholder: #AAA;
-  --disabled: #EEE;
-  --cep: #CCFFFF;
-  --white: #FFF;
+  --error-color: #ff3333;
+  --placeholder: #aaa;
+  --disabled: #eee;
+  --cep: #ccffff;
+  --white: #fff;
 }
 
 * {

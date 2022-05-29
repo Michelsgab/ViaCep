@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="assets/bxs-location-plus.svg" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>ViaCep</title>
   </head>
@@ -64,7 +68,9 @@
               />
             </div>
             <div class="btn-container">
-              <button name="btnSave" class="btn btn-left" type="submit">Save</button>
+              <button name="btnSave" class="btn btn-left" type="submit">
+                Save
+              </button>
               <button name="btnClear" class="btn btn-right">Clear</button>
             </div>
           </form>
@@ -78,6 +84,22 @@
         </div>
       </section>
     </main>
+    <section id="modal-contact" class="modal-container active">
+      <div class="modal-box">
+        <div class="modal-content">
+          <a href="https://github.com/Michelsgab/viacep" target="_blank"
+            ><i class="bx bxl-github modal-link"></i>Michelsgab</a
+          >
+          <a href="https://instagram.com/g.michels_" target="_blank"
+            ><i class="bx bxl-instagram modal-link"></i>g.michels_</a
+          >
+          <a href="https://www.linkedin.com/in/gabrielmichels/" target="_blank"
+            ><i class="bx bxl-linkedin modal-link"></i>Gabriel Michels</a
+          >
+        </div>
+        <button class="btn">Close</button>
+      </div>
+    </section>
 
     <script type="module" src="js/main.js"></script>
   </body>
