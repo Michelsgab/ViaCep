@@ -31,6 +31,7 @@ export function init() {
   state.errorNumber = document.querySelector('[data-error="number"]');
 
   state.inputNumber.addEventListener("change", handleInputNumberChange);
+  state.inputNumber.addEventListener("keyup", handleInputNumberKeyup);
   state.inputCep.addEventListener("change", handleInputCepChange);
   state.btnClear.addEventListener("click", handleBtnClearClick);
   state.btnSave.addEventListener("click", handleBtnSaveClick);
@@ -55,7 +56,7 @@ async function handleBtnSaveClick(e) {
   //   const result = await requestService.getJson(
   //     "https://viacep.com.br/ws/01001000/json/"
   //   );
-  console.log(e.target);
+  console.log(state.address);
 }
 
 async function handleInputCepChange(e) {
@@ -69,10 +70,14 @@ async function handleInputCepChange(e) {
     setFormError("cep", "");
     state.inputNumber.focus();
   } catch (e) {
-      state.inputStreet.value = "";
-      state.inputCity.value = "";
-      setFormError("cep", "Informe um CEP válido")
+    state.inputStreet.value = "";
+    state.inputCity.value = "";
+    setFormError("cep", "Informe um CEP válido");
   }
+}
+
+function handleInputNumberKeyup(e) {
+  state.address.number = e.target.value;
 }
 
 function clearForm() {
