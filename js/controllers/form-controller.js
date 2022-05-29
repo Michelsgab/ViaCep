@@ -30,6 +30,7 @@ export function init() {
   state.errorNumber = document.querySelector('[data-error="number"]');
 
   state.inputNumber.addEventListener("change", handleInputNumberChange);
+  state.btnClear.addEventListener("click", handleBtnClearClick);
 
   //   setFormError("cep", "Cep inválido")
   //   setFormError("number", "Número inválido")
@@ -39,6 +40,21 @@ function handleInputNumberChange(e) {
   e.target.value == ""
     ? setFormError("number", "Número é um campo obrigatório")
     : setFormError("number", "");
+}
+
+function handleBtnClearClick(e) {
+  event.preventDefault();
+  clearForm();
+}
+
+function clearForm() {
+  state.inputCep.value = "";
+  state.inputStreet.value = "";
+  state.inputNumber.value = "";
+  state.inputCity.value = "";
+  state.inputCep.focus();
+  setFormError("cep", "");
+  setFormError("number", "");
 }
 
 function setFormError(key, value) {
