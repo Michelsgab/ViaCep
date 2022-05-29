@@ -9,6 +9,7 @@ export function init() {
   state.container = document.querySelector("#modal-contact");
   state.btnClose = document.querySelector("#modal-contact-close");
   state.btnClose.addEventListener("click", handleBtnCloseClick);
+  state.container.addEventListener("click", handleContainerClick);
 }
 
 export function showModal() {
@@ -21,4 +22,11 @@ export function closeModal() {
 function handleBtnCloseClick(e) {
   e.preventDefault();
   closeModal();
+}
+
+function handleContainerClick(e) {
+  e.preventDefault();
+  if (e.target === this) {
+    closeModal();
+  }
 }
