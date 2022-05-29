@@ -52,6 +52,7 @@ function handleBtnClearClick(e) {
 async function handleBtnSaveClick(e) {
   e.preventDefault();
   listController.addCard(state.address);
+  clearForm();
 }
 
 async function handleInputCepChange(e) {
@@ -80,9 +81,13 @@ function clearForm() {
   state.inputStreet.value = "";
   state.inputNumber.value = "";
   state.inputCity.value = "";
+
   state.inputCep.focus();
+  
   setFormError("cep", "");
   setFormError("number", "");
+
+  state.addres = new Address();
 }
 
 function setFormError(key, value) {
