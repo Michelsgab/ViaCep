@@ -1,5 +1,6 @@
 import Address from "../models/address.js";
 import * as addressService from "../services/address-service.js";
+import * as listController from "./list-controller.js";
 
 function State() {
   this.address = new Address();
@@ -35,9 +36,6 @@ export function init() {
   state.inputCep.addEventListener("change", handleInputCepChange);
   state.btnClear.addEventListener("click", handleBtnClearClick);
   state.btnSave.addEventListener("click", handleBtnSaveClick);
-
-  //   setFormError("cep", "Cep inválido")
-  //   setFormError("number", "Número inválido")
 }
 
 function handleInputNumberChange(e) {
@@ -53,10 +51,7 @@ function handleBtnClearClick(e) {
 
 async function handleBtnSaveClick(e) {
   e.preventDefault();
-  //   const result = await requestService.getJson(
-  //     "https://viacep.com.br/ws/01001000/json/"
-  //   );
-  console.log(state.address);
+  listController.addCard(state.address);
 }
 
 async function handleInputCepChange(e) {
